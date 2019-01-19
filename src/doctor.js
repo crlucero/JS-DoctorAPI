@@ -10,8 +10,8 @@ export class Doctor {
 
 export class Specialty {
 
-    // This is the main API query that will grab all doctors' information
-    getDoctorByName(name, specialty) {
+    // This is the main API query that will grab doctors and a specialty
+    getDoctorBySpecialty(name, specialty) {
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
             let url = `https://api.betterdoctor.com/2016-03-01/doctors?user_key=${process.env.exports.apiKey}&location=wa-seattle&query=${specialty}&name=${name}`;
